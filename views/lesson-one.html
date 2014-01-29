@@ -1,0 +1,150 @@
+<h1>Lesson 1 - Basics</h1>
+<div class="lesson-section">
+	<h2>Bad Habits</h2>
+	<p>
+		Coding, in my opinion, is properly simple. It doesn't take much to learn the basics, and once you have a good grounding, in order to become good at it, all you need is plenty of practice.
+	</p>
+	<blockquote>
+		<p>No developer can ever know everything - every developer will google solutions to problems daily.</p>
+	</blockquote>
+	<p>
+		<strong>But - there's a but.</strong> It's incredibly easy to pick up bad habits, which not only make you shit at coding, but also makes your projects take longer to write, less easy to improve, and completely unreliable.
+	</p>
+	<p>
+		Bad habits are especially easy to pick up when you first start out. It may seem harmless making small projects which don't use best practices, but cutting corners is a slippery slope. Because of this - I'll be teaching you from the very beginning to use the very best practices. Not all of it will make sense right away (and may seem complicated), but at the end, you'll probably be better than most of my colleagues.
+	</p>
+	<p>
+		Before we get in to coding techniques, we'll start off with some core concepts in this lesson.
+	</p>
+</div>
+<div class="lesson-section">
+	<h3>Number 1. What is Code</h3>
+	<p>
+		There is only one language computers really understand - binary. Unfortunately, humans struggle to read binary - so we invented code. <blockquote><p>Code is usually plain English, which follows a set of rules, called a syntax.</p></blockquote> The syntax we use depends on the language we'd like to code in - languages can vary wildly, but generally fall into two distinct categories, Functional Languages, and Object-Oriented Languages. We'll go into both of these later on.
+	</p>
+	<p>
+		Once we've written our code, we need to <strong>compile</strong> it. Which brings us on to point number 2.
+	</p>
+</div>
+<div class="lesson-section">
+	<h3>Number 2. What is Compiling</h3>
+	<p>
+		Compiling code is the act of converting our plain English code into binary. All languages require a compiler, and the length of time a compiler requires to change our code into binary can vary. For example, this page you're reading is written in HTML and Javascript - both these languages can be compiled so fast, it occurs in the time you loaded the page. When you hit refresh, the page has been compiled into binary, and displayed in your browser for you to read.
+	</p>
+	<p>
+		Other languages can take much longer to compile - as another example, a large Java project can take 3 minutes to compile. So, <em>what makes Javascript so quick to compile, and Java so long?</em> The answer lies in how easy the language is to write - and there are hundreds of semantics which distinguish languages, none of which I will go into right now.
+	</p>
+</div>
+<div class="lesson-section">
+	<h3>Number 3. Variables &amp; Types</h3>
+	<p>
+		There are concepts, however, which all languages share. One such concept, is the concept of a <strong>variable</strong>.
+	</p>
+	<blockquote>
+		<p>Variables, just like in algebra, are named pieces of information.</p>
+	</blockquote>
+	<p>
+		I've used the term "pieces of information" here for a good reason - variables can represent an infinite number of things. For example, the variable <strong>x</strong> could represent a number, or some text, or something far more complex.
+	</p>
+	<div class="bad-habit">
+		<h5>Bad Habit!</h5>
+		<p>
+			Variables should always be named something which makes sense. Half-assed variable naming is the most obvious sign of a lazy (shit) developer. By naming your variable something meaningful, it makes the code easier for someone new to understand it; this is called <strong>self-documenting code</strong>.
+		</p>
+	</div>
+	<p>
+		This brings us onto <strong>types</strong>. Most languages will let you assign a type to a variable while you code - this allows the IDE (see below) to help you while you write the code, by only allowing you to use the variable in ways that it can be used. For example, it'll tell you if you try to add text to a number, or something else which doesn't make sense.
+	</p>
+	<div class="definition">
+		<h5>What's an IDE?</h5>
+		<p>An IDE (Integrated Development Environment) is software which makes your life easier when you write code. The features an IDE will offer can differ, but most will offer Code completion (where it will guess what you're about to type, and type it for you), Code quality tips (where it will tell you you're doing something silly), as well as compile your code for you.</p>
+	</div>
+</div>
+<div class="lesson-section">
+	<h3>Number 4. Primitives</h3>
+	<p>
+		Every language will have a 'built-in' set of types called Primitives. By combining primitives into bundles, we can create our own types - this is the foundation of object-oriented programming, which we'll get into later.
+	</p>
+	<p>
+		The primitives will vary depending on the language, but every language will have the four main primitives:
+		<ul>
+			<li>Bytes - the most basic primitive, a byte represents a single binary unit. You'll rarely use these.</li>
+			<li>Boolean - a value which is true or false. Technically a boolean is a byte, but most languages distinguish between the two.</li>
+			<li>Numbers - these will often be split into several primitives, such as integers and floats (floating point numbers, which basically means decimals). In some languages, there'll be even more primitives for numbers, which dictate the maximum size of the variable.</li>
+			<li>Characters - a single text character. In programming, we call text <strong>Strings</strong> - this is because text is made of 'Strings of characters'.</li>
+		</ul>
+	</p>
+</div>
+<div class="lesson-section">
+	<h3>Number 5. Methods</h3>
+	<p>
+		So what distinguishes primitive types from other types? The answer is <strong>methods</strong>.
+	</p>
+	<blockquote>
+		<p>
+			Methods are similar to variables, except while a variable is a named 'piece of information', a method is a named 'unit of work'.
+		</p>
+	</blockquote>
+	<p>
+		Take the following Java example.
+	</p>
+<div hljs="" language="java">
+int myInteger = 4;
+int myOtherInteger = 8;
+
+int add(int x, int y){
+    return x + y;
+}
+
+int theResult = add(myInteger, myOtherInteger);
+</div>
+	<div class="definition">
+		<h5>What's the Semi-Colon all about?</h5>
+		<p>
+			In many languages, a semi-colon designates the end of the sentence. Having a <strong>termination character</strong> such as this, allows us to format the code so that it's easier to read, without disrupting what the code does.
+		</p>
+	</div>
+	<p>
+		In the example above, we have two variables, which we've defined as Integers, and named myInteger and myOtherInteger.
+	</p>
+	<p>We then define a method called add. To define a method, there are three things we need to tell the computer:
+		<ul>
+			<li>The Type which the method 'returns'.</li>
+			<li>The name of the method.</li>
+			<li>The 'arguments' the method requires.</li>
+		</ul>
+	</p>
+	<div class="definition">
+		<h5>What's an Argument?</h5>
+		<p>
+			Arguments are variables the method needs in order to perform its unit of work. When we define an argument, we need to specify the same details as we would a regular variable, such as type and name. Argument variables will <em>only exist while the method is being used</em>.
+		</p>
+	</div>
+	<div class="definition">
+		<h5>And... What do you mean by Return?</h5>
+		<p>
+			Arguments are what you put in to a method; the return is what you get out. Returning a variable from a method is optional - but you still need to specify that the method returns nothing. Furthermore, most languages will only allow you to return one variable.
+		</p>
+	</div>
+	<p>
+		So... back to the example. In our <strong>add</strong> method, we specify the return type first - in our case, an integer. We then give it the name add, and specify the arguments.
+	</p>
+	<p>
+		In Java (and many other languages), the arguments are defined within parentheses. We have two arguments for our add method, x and y, and they are also integers. Now we've described the method, we now need to do the actual work - in this case, actually add the variables together, and return the resulting variable.
+	</p>
+	<p>
+		In the final line of code, we use our new method. To use a method, we say the name of the method (add), and in parentheses, we 'pass' the variables which the method will use as arguments. In programming jargon, to pass a variable to a method, simply means to give the variable as an argument.
+	</p>
+	<p>
+		When we used our method, we set the return of the method to be a new variable - which we called theResult. If everything went to plan, the variable theResult will have the value of 12!
+	</p>
+</div>
+<div class="lesson-section">
+	<h2>Summary</h2>
+	<p>
+		Sooooo... what have we learnt? We've covered 5 important concepts, which cover the building blocks of coding. We've talked about variables and methods, how a variables type can help us code, and how languages have primitive types which all other types are built up from.
+	</p>
+	<p>
+		Next up, we're going to learn about the two main categories of programming languages, focussing on the more powerful of the two.
+	</p>
+</div>

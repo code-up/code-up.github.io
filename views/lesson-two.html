@@ -1,0 +1,75 @@
+<h1>Lesson 2 - Languages</h1>
+<div class="lesson-section">
+	<p>
+		Programming languages can be incredibly different. Some are complicated, and let you take control of every low-level detail - which can be risky, but can also cause your programs to be efficient. Others will sacrifice performance in order to make your life easier.
+	</p>
+	<p>
+		Very broadly speaking, there are two main categories of languages. Functional languages, and Object-Oriented languages. Functional languages are often very basic, and are normally used to get a simple job done quickly. They use methods and variables, but there is no such thing as a type, so it's easy for errors to occur. Often, functional languages don't require compiling before being executed - and often exist as a 'script'.
+	</p>
+	<div class="example">
+		<h5>Some Examples of Functional Languages</h5>
+		<ul>
+			<li>Bash - a basic Linux/Mac language.</li>
+			<li>Batch - a basic Windows language.</li>
+		</ul>
+	</div>
+	<p>
+		Object-Oriented languages are completely different. They are considered far more powerful than functional languages, because they allow better organisation of code, promote more reusable code, and are easier to extend.
+	</p>
+	<div class="definition">
+		<h5>What do you mean by Extend?</h5>
+		<p>If you ask any programmer whether the current project they're working on does everything that was originally required of it, and nothing more - they'll say No. If they says Yes, they're fucking liars. Requirements change, and so we need to develop our projects in such a way that if we need to make it do something new, it's easy for us to change it. We'll explain much more about this later on.</p>
+	</div>
+	<div class="example">
+		<h5>Some Examples of Object-Oriented Languages</h5>
+		<ul>
+			<li>Java - a multi-platform language.</li>
+			<li>C++ - a complicated, but also multi-platform language.</li>
+			<li>C# - a simplified Windows version of C++.</li>
+			<li>Objective-C - a simplified Mac only version of C++.</li>
+		</ul>
+	</div>
+	<p>
+		These categories are a good way to distinguish and generalise between languages, but many languages blur the lines between them. I've put the most important ones below.
+	</p>
+	<div class="example">
+		<h5>Examples of Hybrid Languages</h5>
+		<ul>
+			<li>Javascript - a language which forms one of the main languages of the Web. At it's core, javascript is OO (object-oriented), but it's often written in a functional style.</li>
+			<li>VBA - a Windows language, which Excel Macros are written in.</li>
+			<li>HTML - an XML based language.</li>
+			<li>CSS - a Web stylesheets language, which has some OO concepts.</li>
+		</ul>
+	</div>
+</div>
+<div class="lesson-section">
+	<h2>What makes a Language Object-Oriented?</h2>
+	<p>
+		Object-Oriented languages (predictably) use the concept of an Object at their core. Objects, just like in real life, have properties. Take an Apple for example; Apples have a colour, a size, as well as many other properties which we can use to differentiate between two apples. Below, I'll describe an Apple with some properties in Java code.
+	</p>
+	<div hljs="" language="java">
+public class Apple {
+
+    private final String colour;
+    private final int size;
+    private final boolean edible;
+    ...
+}	
+</div>
+	<p>
+		The code above describes our version of an Apple object; we have a text property called colour, an integer which describes the size, and a boolean which will tell us whether the variable is true or false. So far, I've called these variables 'properties', because we should consider them descriptive properties of the object we wish to describe. Unfortunately, in programming, the correct term for an object's properties are its 'fields'.
+	</p>
+	<div class="definition">
+		<h5>WTF does Public, Private, Final and Class mean?</h5>
+		<p>
+			The Public, Private, Final and Class are parts of the Java syntax. Public and Private are <strong>Access Modifiers</strong> - we'll go into these in detail later.
+		</p>
+		<p>
+			The Final keyword states that the method or field will never change. This allows us to create immutable objects - something I will definitely explain properly later.
+		</p>
+		<p>
+			Lastly, the Class keyword states that the following block of code describes a new type of object. Classes in Java must exist within their own file, where the name of the file matches the name of the Class exactly - no exceptions.
+		</p>
+	</div>
+
+</div>
