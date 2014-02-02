@@ -47,7 +47,7 @@
 	<p>
 		Object-Oriented languages (predictably) use the concept of an Object at their core. Objects, just like in real life, have properties. Take an Apple for example; Apples have a colour, a size, as well as many other properties which we can use to differentiate between two apples. Below, I'll describe an Apple with some properties in Java code.
 	</p>
-	<pre>
+	<div hljs="" language="java">
 public class Apple {
 
     private final String colour;
@@ -55,7 +55,7 @@ public class Apple {
     private final boolean edible;
     ...
 }	
-</pre>
+</div>
 	<p>
 		The code above describes our version of an Apple object; we have a text property called colour, an integer which describes the size, and a boolean which will tell us whether the variable is true or false. So far, I've called these variables 'properties', because we should consider them descriptive properties of the object we wish to describe. Unfortunately, in programming, the correct term for an object's properties are its 'fields'.
 	</p>
@@ -71,5 +71,65 @@ public class Apple {
 			Lastly, the Class keyword states that the following block of code describes a new type of object. Classes in Java must exist within their own file, where the name of the file matches the name of the Class exactly - no exceptions.
 		</p>
 	</div>
+	<p>
+		Apart from fields, objects also have methods. Methods, as described in the previous lesson, are named pieces of work, which can accept arguments and return data.
+	</p>
+	<blockquote>
+		<p>
+			The fields of an object contain the data for that object; whereas the methods of an object, perform	actions on that data.
+		</p>
+	</blockquote>
+	<p>
+		Going back to our Apple, an example method could be to 'bite' the apple. For this to make sense, we'll add another field to our object; 'amountEaten'.
+	</p>
+		<div hljs="" language="java">
+public class Apple {
 
+    private final String colour;
+    private final int size;
+    private final boolean edible;
+    private int amountEaten = 100; // Integer representing the percentage of the apple remaining.
+    
+    public void bite(int amountToBite){
+    	this.amountEaten -= amountToBite;
+    }
+}	
+</div>
+	<p>
+		A couple things are going on here. Firstly we declared our new integer field, amountEaten; note that because we intend to change this field, we <strong>do not mark it final</strong>. 
+	</p>
+	<p>
+		Secondly, we provided a comment explaining the field. Comments are a way to give (often invaluable) information about a block of code, without affecting the compilation of that code. In fact, the compiler will delete all data within comments immediately. In Java, there are two types of comments; in-line comments <code>// Which use the double forward slash syntax</code>, and multi-line comments:
+		<div hljs="" language="java">
+/**
+* 	Which use this odd asterix format.
+*
+*/
+</div>
+	</p>
+	<p>
+		Next, we described our method; first we marked it public, which will allow other Objects to use the method (more on this later). We then specified the method return type, in this case <strong>nothing</strong> or <code>void</code>. Next we named the method <code>bite</code>, and specified that it has one argument <code>int amountToBite</code>.
+	</p>
+	<p>
+		In the method body, we use a little bit of syntax magic. We could have written the line like this:
+		<div hljs="" language="java">
+this.amountEaten = amountEaten - amountToBite;
+</div>
+		instead, the Java syntax allows us to write the same line using the <code>-=</code> syntax.
+	</p>
+	<p>
+		The <code>-=</code> syntax effectively states 'subtract the next value from the variable.' The other 'number' based syntax features are <code>integer++</code>, which will add one to the specified variable (this is useful for counting). Both of these types of syntax work with plus and minus (i.e. <code>+=</code> or <code>integer--</code>).
+	</p>
+	<p>
+		The Java syntax has several features, such as the above, which make our lives as developers a little easier. This is called <strong>Syntactic Sugar</strong>; as always, this will be discussed properly later.
+	</p>
+</div>
+<div class="lesson-section">
+	<h2>Summary</h2>
+	<p>
+		Lesson over for another day - so what did we learn. We learnt that there are two main types of Coding Language, Procedural and Object-Oriented, and that OO languages are going to be our primary focus in these lessons.
+	</p>
+	<p>
+		We also learnt what makes an Object, and wrote our first Java Object! See you next time for Interfaces.
+	</p>
 </div>
